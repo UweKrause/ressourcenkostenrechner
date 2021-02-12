@@ -33,7 +33,7 @@
 
             let numberOfCheckedItems = 0;
 
-            wochentagePerson = []
+            wochentagePerson = [];
 
             for (let p = 1; p <= 8; p++) {
                 const checkboxes = document.getElementsByName("wochentage" + p.toString());
@@ -53,7 +53,13 @@
         }
 
         function getAnteilpreis() {
-            anteilpreis = gesamtkosten / anteile;
+
+            if (anteile > 0) {
+                anteilpreis = gesamtkosten / anteile;
+            } else {
+                anteilpreis = 0;
+            }
+
             document.getElementById('anteilpreis').innerHTML = anteilpreis.toString();
         }
 
