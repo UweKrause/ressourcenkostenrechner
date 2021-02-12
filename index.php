@@ -126,11 +126,11 @@ for ($p = 1; $p <= $personenzahl; $p++) {
     <form>
         <p>
             <label for="fixkosten">Fixkosten:</label>
-            <input type="text" id="fixkosten" name="fixkosten" oninput="recalculate()">
+            <input type="text" id="fixkosten" name="fixkosten" value="1545" oninput="recalculate()">
         </p>
         <p>
             <label for="variableKosten">variable Kosten:</label>
-            <input type="text" id="variableKosten" name="variableKosten" oninput="recalculate()">
+            <input type="text" id="variableKosten" name="variableKosten" value="0" oninput="recalculate()">
         </p>
     </form>
     <p>Gesamtkosten: <span id="gesamtkosten">0</span></p>
