@@ -11,7 +11,7 @@
     <script type="text/javascript">
 
         let gesamtkosten = 0;
-        let anteile = 0
+        let anteile = 0;
         let anteilpreis = 0;
         let wochentagePerson = []
 
@@ -35,7 +35,7 @@
 
             wochentagePerson = [];
 
-            for (let p = 1; p <= 8; p++) {
+            for (let p = 1; p <= 12; p++) {
                 const checkboxes = document.getElementsByName("wochentage" + p.toString());
                 wochentagePerson[p] = 0
                 for (let i = 0; i < checkboxes.length; i++) {
@@ -64,7 +64,7 @@
         }
 
         function getKostenProPerson() {
-            for (let p = 1; p <= 8; p++) {
+            for (let p = 1; p <= 12; p++) {
 
                 let genutzteAnteile = wochentagePerson[p];
                 let personenKosten = anteilpreis * genutzteAnteile;
@@ -92,7 +92,7 @@ foreach ($days as $v) {
 /*
  * Für jede Person eine Zeile
  */
-$personenzahl = 8;
+$personenzahl = 12;
 
 $tbody = "\n";
 for ($p = 1; $p <= $personenzahl; $p++) {
