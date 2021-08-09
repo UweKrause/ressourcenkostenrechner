@@ -68,8 +68,15 @@
 
                 let genutzteAnteile = wochentagePerson[p];
                 let personenKosten = anteilpreis * genutzteAnteile;
+                let kurtaxe = genutzteAnteile * 3.0
 
-                document.getElementById('preisPerson' + p.toString()).innerHTML = personenKosten.toFixed(2).toString();
+                document.getElementById('preisPerson' + p.toString()).innerHTML =
+                    personenKosten.toFixed(2)
+                    + " + "
+                    + kurtaxe.toFixed(2)
+                    + " = "
+                    + (personenKosten + kurtaxe).toFixed(2)
+                ;
             }
         }
     </script>
